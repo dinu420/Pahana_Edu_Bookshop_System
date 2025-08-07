@@ -7,6 +7,7 @@
 <html>
 <head>
     <title>Edit Item</title>
+    <link rel="stylesheet" href="assets/css/edit-item.css">
 </head>
 <body>
 

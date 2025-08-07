@@ -5,6 +5,7 @@
 <html>
 <head>
     <title>Generate Bill</title>
+    <link rel="stylesheet" href="assets/css/billing.css">
 </head>
 <body>
     <a href="home.jsp" class="back-link-top">Back to Dashboard</a>

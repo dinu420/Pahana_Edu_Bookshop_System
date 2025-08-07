@@ -1,0 +1,111 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to right, #2e3c7e, #1b2330);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* Login Card */
+.login-container {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Title */
+.login-container h2 {
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(92, 157, 237, 0.7);
+}
+
+/* Labels */
+.login-container label {
+    display: block;
+    text-align: left;
+    margin: 12px 0 5px;
+    font-size: 14px;
+    color: #d0d0d0;
+}
+
+/* Input fields */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #e9eef3;
+    margin-bottom: 10px;
+    font-size: 14px;
+    outline: none;
+}
+
+.login-container input[type="text"]:focus,
+.login-container input[type="password"]:focus {
+    border: 2px solid #5c9ded;
+}
+
+/* Password field with eye icon */
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #555;
+}
+
+/* Login button */
+.login-container input[type="submit"] {
+    margin-top: 15px;
+    padding: 12px;
+    width: 100%;
+    background: #5c9ded;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-container input[type="submit"]:hover {
+    background: #478ed8;
+}
+
+/* Error message */
+.login-container p {
+    margin-top: 20px;
+    color: #ff7777;
+    font-size: 14px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -15,6 +15,7 @@
 <html>
 <head>
     <title>Edit Customer</title>
+    <link rel="stylesheet" href="assets/css/edit-customer.css">
 </head>
 <body>
     <a class="back-link-top" href="customers">Back to Customers</a>

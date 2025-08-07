@@ -1,0 +1,72 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Import Google Font (if not already in HTML) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    height: 100vh;
+    background: linear-gradient(to right, #2e3c7e, #1b2330);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* Container Styling */
+.container {
+    text-align: center;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    animation: fadeIn 1.2s ease-in-out;
+    max-width: 400px;
+    width: 90%;
+}
+
+/* Heading */
+h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(92, 157, 237, 0.6);
+    letter-spacing: 1px;
+}
+
+/* Loading Text */
+p {
+    font-size: 16px;
+    color: #e0e0e0;
+    margin-top: 20px;
+}
+
+/* Spinner */
+.spinner {
+    margin: 0 auto;
+    width: 70px;
+    height: 70px;
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    border-top: 6px solid #5c9ded;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+}
+
+/* Spinner Animation */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Fade-in for the container */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

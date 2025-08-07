@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>System Guide - Pahana Billing System</title>
+    <link rel="stylesheet" href="assets/css/help.css">
 </head>
 <body>
 	<a href="home.jsp" class="back-link"> Back to Dashboard</a>

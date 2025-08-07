@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Add New Item</title>
+    <link rel="stylesheet" href="assets/css/add-item.css">
 </head>
 <body>
     <a href="items" class="back-link">Back to Items</a>

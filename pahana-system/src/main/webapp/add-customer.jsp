@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Add New Customer</title>
+    <link rel="stylesheet" href="assets/css/add-customer.css">
 </head>
 <body>
     <a class="back-link-top" href="customers">Back to Customers</a>

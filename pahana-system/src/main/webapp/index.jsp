@@ -1,8 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <html>
 <head>
     <title>Loading...</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="script" href="assets/js/script.js">
     <meta http-equiv="refresh" content="3;URL=login.jsp">
 </head>
 <body>

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #2e3c7e, #1b2330);
+    color: white;
+    min-height: 100vh;
+    padding: 60px 30px;
+}
+
+/* Fixed Back to Dashboard Link */
+.back-link {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    background: rgba(92, 157, 237, 0.9);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+    z-index: 1000;
+}
+
+.back-link :hover {
+    background: rgba(72, 142, 216, 0.9);
+}
+
+/* Page Title */
+h1 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-shadow: 0 0 8px rgba(92, 157, 237, 0.6);
+    text-align: center;
+}
+
+/* Help Section Card */
+.section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    margin-bottom: 30px;
+    animation: fadeInUp 0.6s ease;
+}
+
+.section h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #ffffff;
+    text-shadow: 0 0 6px rgba(92, 157, 237, 0.5);
+}
+
+.section p, .section ul {
+    font-size: 15px;
+    color: #f0f0f0;
+    margin-top: 6px;
+}
+
+.section ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.note {
+    background-color: rgba(255, 255, 204, 0.15);
+    border-left: 5px solid #f1c40f;
+    padding: 12px;
+    margin-top: 12px;
+    font-style: italic;
+    color: #ffec99;
+}
+
+/* Footer */
+footer, .footer-text {
+    text-align: center;
+    font-size: 0.9em;
+    color: #bbb;
+    margin-top: 40px;
+}
+
+/* Divider */
+hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 40px 0;
+}
+
+/* Simple animation */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 80px 20px 40px;
+    }
+
+    .back-link-top {
+        top: 15px;
+        right: 15px;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 20px 16px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .section h2 {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #2e3c7e, #1b2330);
+    color: white;
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+.nav {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Welcome message */
+.nav strong {
+    color: #5c9ded;
+    font-size: 16px;
+}
+
+/* Nav links */
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #5c9ded;
+}
+
+/* Dashboard Content Section */
+.section {
+    margin: 50px auto;
+    max-width: 800px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(92, 157, 237, 0.5);
+}
+
+.section p {
+    font-size: 16px;
+    color: #d0d0d0;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

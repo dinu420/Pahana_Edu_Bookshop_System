@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #2e3c7e, #1b2330);
+    color: white;
+    min-height: 100vh;
+    padding: 60px 30px;
+}
+
+/* Fixed back link to Dashboard */
+.back-link-top {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    background: rgba(92, 157, 237, 0.9);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+    z-index: 1000;
+}
+
+.back-link-top:hover {
+    background: rgba(72, 142, 216, 0.9);
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    max-width: 1000px;
+    margin: 100px auto 40px;
+}
+
+/* Header and add button */
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.header-row h2 {
+    font-size: 26px;
+    text-shadow: 0 0 8px rgba(92, 157, 237, 0.6);
+}
+
+/* Add button */
+a.add-button {
+    background-color: #5c9ded;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+a.add-button:hover {
+    background-color: #478ed8;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #f0f0f0;
+    font-size: 14px;
+}
+
+th {
+    background: rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+}
+
+/* Action buttons */
+a.button {
+	 margin-right: 8px;
+    padding: 6px 12px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: background 0.3s ease;
+}
+
+a.button:hover {
+    background: #0056b3;
+}
+
+a.danger {
+    background: #dc3545;
+}
+
+a.danger:hover {
+    background: #a71d2a;
+}

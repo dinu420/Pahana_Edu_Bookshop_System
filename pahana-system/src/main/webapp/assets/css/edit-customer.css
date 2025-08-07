@@ -1,0 +1,137 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #2e3c7e, #1b2330);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 20px;
+}
+
+.back-link-top {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    background: rgba(92, 157, 237, 0.9);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+    z-index: 1000;
+}
+
+.back-link-top:hover {
+    background: rgba(72, 142, 216, 0.9);
+}
+
+/* Adjust container top margin to prevent overlap */
+.form-container {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    max-width: 600px;
+    width: 100%;
+    margin: 100px auto 40px; /* top margin for fixed backlink */
+}
+
+/* rest of your form styling remains same */
+
+
+/* Header with title and back link */
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.form-header h2 {
+    font-size: 26px;
+    text-shadow: 0 0 8px rgba(92, 157, 237, 0.6);
+    margin: 0;
+}
+
+.form-header .back-link {
+    color: #5c9ded;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.form-header .back-link:hover {
+    color: #84b9ff;
+}
+
+/* Form labels and inputs */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #d0d0d0;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: none;
+    background: #e9eef3;
+    font-size: 14px;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border: 2px solid #5c9ded;
+}
+
+/* Submit button */
+input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #5c9ded;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #478ed8;
+}
+
+
+a {
+    display: block;
+    margin-top: 25px;
+    text-align: center;
+    text-decoration: none;
+    color: #5c9ded;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #84b9ff;
+}

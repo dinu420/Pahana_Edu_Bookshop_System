@@ -19,6 +19,7 @@
 <html>
 <head>
     <title>Customer Management</title>
+    <link rel="stylesheet" href="assets/css/customer.css">
 </head>
 <body>
 <a href="home.jsp" class="back-link-top">Back to Dashboard</a>

@@ -17,6 +17,7 @@
 <html>
 <head>
     <title>Item Management</title>
+    <link rel="stylesheet" href="assets/css/item.css">
 <body>
     <a class="back-link-top" href="home.jsp">Back to Dashboard</a>
 
