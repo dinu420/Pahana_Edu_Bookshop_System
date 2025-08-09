@@ -1,8 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
-<%@ page import="java.util.*, com.pahanasystem.model.Customer" %>
 <%@ page session="true" %>
-<%@ page import="com.pahanasystem.service.impl.CustomerServiceImpl" %>
-<%@ page import="com.pahanasystem.dao.impl.CustomerDaoImpl" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page isELIgnored="false" %>
 <%

@@ -3,7 +3,7 @@
 <head>
     <title>Loading...</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="script" href="assets/js/script.js">
+    <script src="assets/js/script.js" defer></script>
     <meta http-equiv="refresh" content="3;URL=login.jsp">
 </head>
 <body>
