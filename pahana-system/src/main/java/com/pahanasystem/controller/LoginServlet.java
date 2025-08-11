@@ -41,7 +41,7 @@ public class LoginServlet extends HttpServlet {
                         request.getRequestDispatcher("/home.jsp").forward(request, response);
                         return;
                     case "admin":
-                        request.getRequestDispatcher("/admin_dashboard.jsp").forward(request, response);
+                        request.getRequestDispatcher("/admin-dashboard.jsp").forward(request, response);
                         return;
                     default:
                         // Unknown role, return error
