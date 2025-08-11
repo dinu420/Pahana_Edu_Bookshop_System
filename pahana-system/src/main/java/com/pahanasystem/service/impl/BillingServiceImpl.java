@@ -54,10 +54,6 @@ public class BillingServiceImpl implements BillingService {
 
         billDao.save(bill);
 
-       
-        customer.setUnitsConsumed(customer.getUnitsConsumed() + unitsConsumed);
-        customerDao.update(customer);
-
         return bill;
     }
 
