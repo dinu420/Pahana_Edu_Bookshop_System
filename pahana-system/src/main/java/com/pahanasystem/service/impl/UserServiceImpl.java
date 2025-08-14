@@ -4,6 +4,7 @@ import com.pahanasystem.dao.UserDao;
 import com.pahanasystem.model.User;
 import com.pahanasystem.service.UserService;
 
+import java.util.List;
 import java.util.Optional;
 
 public class UserServiceImpl implements UserService {
@@ -45,5 +46,16 @@ public class UserServiceImpl implements UserService {
             return Optional.empty();
         }
         return userDao.findByUsername(username);
+    }
+    
+    @Override
+    public boolean deleteByUsername(String username) {
+        return userDao.deleteByUsername(username);
+    }
+    
+    @Override
+    public List<User> getAllCashiers() {
+        // Fetch all users with role "cashier" from DAO
+        return userDao.getUsersByRole("cashier");
     }
 }

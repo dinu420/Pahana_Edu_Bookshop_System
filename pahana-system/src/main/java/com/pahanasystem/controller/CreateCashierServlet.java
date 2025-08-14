@@ -16,6 +16,7 @@ public class CreateCashierServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 	private final UserService userService = new UserServiceImpl(new UserDaoImpl());
 
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -33,6 +34,6 @@ public class CreateCashierServlet extends HttpServlet {
             request.setAttribute("error", e.getMessage());
         }
 
-        request.getRequestDispatcher("/admin-dashboard.jsp").forward(request, response);
+        request.getRequestDispatcher("/create-cashier.jsp").forward(request, response);
     }
 }
