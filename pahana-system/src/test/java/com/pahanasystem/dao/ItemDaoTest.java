@@ -17,7 +17,7 @@ public class ItemDaoTest {
 	    ItemDao itemDao = new ItemDaoImpl();
 
 
-	    String itemTitle = "Item_" + System.currentTimeMillis();
+	    String itemTitle = "Pastel";
 	    Item item = new Item(0, itemTitle, new BigDecimal("50.00"), 10);
 
 
@@ -37,7 +37,7 @@ public class ItemDaoTest {
 	    ItemDao itemDao = new ItemDaoImpl();
 
 	    
-	    String itemTitle = "UpdateItem_" + System.currentTimeMillis();
+	    String itemTitle = "Pastel";
 	    Item item = new Item(0, itemTitle, new BigDecimal("50.00"), 10);
 	    itemDao.save(item);
 
@@ -66,7 +66,7 @@ public class ItemDaoTest {
 	    ItemDao itemDao = new ItemDaoImpl();
 
 	    
-	    String itemTitle = "DeleteItem_" + System.currentTimeMillis();
+	    String itemTitle = "Pastel";
 	    Item item = new Item(0, itemTitle, new BigDecimal("30.00"), 15);
 	    itemDao.save(item);
 
@@ -82,7 +82,7 @@ public class ItemDaoTest {
 	    
 	    Optional<Item> deletedItem = itemDao.findById(savedItem.getId());
 
-	    // Assertion (Green bar)
+	   
 	    assertTrue(deletedItem.isEmpty(), "Item should be deleted successfully");
 	}
 

@@ -17,7 +17,7 @@ public class UserDaoTest {
         
         UserDao userDao = new UserDaoImpl(); 
 
-        String uniqueUsername = "terry_" + System.currentTimeMillis();
+        String uniqueUsername = "terry"; 
         User user = new User(uniqueUsername, "hashedPwd123", "cashier");
 
         userDao.save(user);
@@ -31,7 +31,7 @@ public class UserDaoTest {
         UserDao userDao = new UserDaoImpl();
 
 
-        String uniqueUsername = "alex_" + System.currentTimeMillis();
+        String uniqueUsername = "alex";
         User user = new User(uniqueUsername, "password123", "cashier");
         userDao.save(user);
 
@@ -46,7 +46,7 @@ public class UserDaoTest {
         UserDao userDao = new UserDaoImpl();
 
 
-        String uniqueUsername = "mike_" + System.currentTimeMillis();
+        String uniqueUsername = "mike";
         User user = new User(uniqueUsername, "pass123", "cashier");
         userDao.save(user);
 
@@ -64,9 +64,9 @@ public class UserDaoTest {
         UserDao userDao = new UserDaoImpl();
 
         
-        String cashier1Username = "cashier1_" + System.currentTimeMillis();
-        String cashier2Username = "cashier2_" + System.currentTimeMillis();
-        String adminUsername = "admin_" + System.currentTimeMillis();
+        String cashier1Username = "cashier1_";
+        String cashier2Username = "cashier2_";
+        String adminUsername = "admin_";
 
       
         User cashier1 = new User(cashier1Username, "pass1", "cashier");

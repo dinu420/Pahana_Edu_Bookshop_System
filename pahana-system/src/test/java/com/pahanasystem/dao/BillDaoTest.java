@@ -4,65 +4,49 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.Optional;
-
+import java.util.List;
 import org.junit.jupiter.api.Test;
 
 import com.pahanasystem.dao.impl.BillDaoImpl;
-import com.pahanasystem.dao.impl.UserDaoImpl;
 import com.pahanasystem.model.Bill;
-import com.pahanasystem.model.User;
 
 public class BillDaoTest {
 
-    @Test
-    void testSaveBill() {
-        BillDao billDao = new BillDaoImpl();
+	@Test
+	void testFindAllForCustomer() {
+	    BillDao billDao = new BillDaoImpl();
 
-        
-        Bill bill = new Bill();
-        bill.setBillNo("BILL_" + System.currentTimeMillis());
-        bill.setAccountNo("C001");
-        bill.setUnits(50);
-        bill.setAmount(new BigDecimal("500"));
-        bill.setGeneratedBy("cashier1");
-        bill.setIssuedAt(LocalDateTime.now());
+	    String accountNo = "C001";
+	    String billNo1 = "BILL_024";
+	    String billNo2 = "BILL_025";
 
-        
-        billDao.save(bill);
+	    // Save first bill
+	    Bill bill1 = new Bill();
+	    bill1.setBillNo(billNo1);
+	    bill1.setAccountNo(accountNo);
+	    bill1.setUnits(20);
+	    bill1.setAmount(new BigDecimal("200"));
+	    bill1.setGeneratedBy("cashier1");
+	    bill1.setIssuedAt(LocalDateTime.now());
+	    billDao.save(bill1);
 
-       
-        Optional<Bill> fetched = billDao.findByBillNo(bill.getBillNo());
+	    // Save second bill
+	    Bill bill2 = new Bill();
+	    bill2.setBillNo(billNo2);
+	    bill2.setAccountNo(accountNo);
+	    bill2.setUnits(35);
+	    bill2.setAmount(new BigDecimal("350"));
+	    bill2.setGeneratedBy("cashier1");
+	    bill2.setIssuedAt(LocalDateTime.now());
+	    billDao.save(bill2);
 
-        
-        assertTrue(fetched.isPresent(), "Bill should be saved and found successfully");
-    }
-    
-    @Test
-    void testFindBillByBillNo() {
-        UserDao userDao = new UserDaoImpl();
-        String uniqueUsername = "cashier_" + System.currentTimeMillis();
-        userDao.save(new User(uniqueUsername, "password123", "cashier"));
+	    // Fetch all bills for this customer
+	    List<Bill> bills = billDao.findAllForCustomer(accountNo);
 
-        BillDao billDao = new BillDaoImpl();
+	    assertTrue(!bills.isEmpty(), "Customer should have at least one bill");
+	    assertTrue(bills.stream().anyMatch(b -> b.getBillNo().equals(billNo1)), "First bill should be found");
+	    assertTrue(bills.stream().anyMatch(b -> b.getBillNo().equals(billNo2)), "Second bill should be found");
+	}
 
-       
-        String billNo = "BILL_" + System.currentTimeMillis();
-        Bill bill = new Bill();
-        bill.setBillNo(billNo);
-        bill.setAccountNo("C001"); 
-        bill.setUnits(30);
-        bill.setAmount(new BigDecimal("300"));
-        bill.setGeneratedBy(uniqueUsername);
-        bill.setIssuedAt(LocalDateTime.now());
-
-        billDao.save(bill);
-
-       
-        Optional<Bill> fetched = billDao.findByBillNo(billNo);
-
-    
-        assertTrue(fetched.isPresent(),"Bill should be found by bill number");
-    }
 
 }

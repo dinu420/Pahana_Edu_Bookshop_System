@@ -15,8 +15,8 @@ public class CustomerDaoTest {
 	void testAddCustomer() {
 	    CustomerDao customerDao = new CustomerDaoImpl();
 
-	    String accountNo = "C" + System.currentTimeMillis(); 
-	    String name = "TestCustomer_" + System.currentTimeMillis();
+	    String accountNo = "C015"; 
+	    String name = "Johnny";
 	    Customer customer = new Customer(accountNo, name, "123 Main St", "0771234567", 100);
 
 	    customerDao.save(customer);
@@ -31,13 +31,13 @@ public class CustomerDaoTest {
 	    CustomerDao customerDao = new CustomerDaoImpl();
 
 	    
-	    String accountNo = "C" + System.currentTimeMillis();
-	    String name = "UpdateCustomer_" + System.currentTimeMillis();
+	    String accountNo = "C016";
+	    String name = "Johnny";
 	    Customer customer = new Customer(accountNo, name, "789 Pine St", "0775556666", 70);
 	    customerDao.save(customer);
 
 	   
-	    customer.setName("UpdatedName");
+	    customer.setName("Eric");
 	    customer.setUnitsConsumed(100);
 	    customerDao.update(customer);
 
@@ -46,7 +46,7 @@ public class CustomerDaoTest {
 
 	 
 	    assertTrue(fetched.isPresent(), "Customer should exist after update");
-	    assertTrue(fetched.get().getName().equals("UpdatedName"), "Customer name should be updated");
+	    assertTrue(fetched.get().getName().equals("Eric"), "Customer name should be updated");
 	    assertTrue(fetched.get().getUnitsConsumed() == 100, "Units consumed should be updated");
 	}
 
@@ -57,8 +57,8 @@ public class CustomerDaoTest {
 	    CustomerDao customerDao = new CustomerDaoImpl();
 
 
-	    String accountNo = "C" + System.currentTimeMillis();
-	    String name = "DeleteCustomer_" + System.currentTimeMillis();
+	    String accountNo = "C017";
+	    String name = "Jessy";
 	    Customer customer = new Customer(accountNo, name, "101 Maple St", "0773334444", 80);
 	    customerDao.save(customer);
 
