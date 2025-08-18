@@ -15,7 +15,7 @@
 
         <form method="get" action="billing" class="form-row">
             <label>Account Number:</label>
-            <input type="text" name="accountNo" value="${param.accountNo}" required/>
+            <input type="text" name="accountNo" value="${param.accountNo}" placeholder="e.g., C000"/>
             <button type="submit">Search</button>
         </form>
 

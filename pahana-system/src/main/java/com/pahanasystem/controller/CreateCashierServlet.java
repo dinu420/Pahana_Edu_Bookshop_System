@@ -25,7 +25,7 @@ public class CreateCashierServlet extends HttpServlet {
         String password = request.getParameter("password");
 
         try {
-            // Force role to cashier
+            
             User newCashier = new User(username, password, "cashier");
             userService.addUser(newCashier);
 

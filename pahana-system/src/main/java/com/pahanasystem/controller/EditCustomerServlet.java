@@ -58,7 +58,7 @@ public class EditCustomerServlet extends HttpServlet {
 
         try {
             customerService.updateCustomer(customer);
-            response.sendRedirect("customers");  // redirect to your customer listing page
+            response.sendRedirect("customers");  
         } catch (Exception e) {
             request.setAttribute("error", e.getMessage());
             request.getRequestDispatcher("/edit-customer.jsp?accountNo=" + accountNo).forward(request, response);

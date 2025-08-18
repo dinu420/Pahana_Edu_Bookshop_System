@@ -11,16 +11,27 @@
         <h2>Add New Item</h2>
         <form action="add-item" method="post">
             <label>Item Name:</label>
-            <input type="text" name="title" required />
+            <input type="text" name="title" />
 
             <label>Unit Price:</label>
-            <input type="number" name="unitPrice" step="0.01" min="0" required />
+            <input type="number" name="unitPrice" step="0.01"  />
             
             <label>Stock Quantity:</label>
-            <input type="number" name="stockQty" min="0" required />
+            <input type="number" name="stockQty"  />
 
             <input type="submit" value="Add Item" />
         </form>
+                    <!-- Error message block -->
+    <%
+        String error = (String) request.getAttribute("error");
+        if (error != null) {
+    %>
+        <div style="color:red; margin-bottom:10px;">
+            <%= error %>
+        </div>
+    <%
+        }
+    %>
     </div>
 </body>
 </html>

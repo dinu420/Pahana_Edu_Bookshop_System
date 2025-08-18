@@ -48,8 +48,7 @@ public class BillingServlet extends HttpServlet {
             throws ServletException, IOException {
 
         String accountNo = request.getParameter("accountNo");
-        // For demo, I assume unitsConsumed is taken from customer info, you can change as needed
-        // Or add a hidden/input field in your billing.jsp form for units consumed if different
+        
         Optional<Customer> customerOpt = billingService.findCustomer(accountNo);
 
         if (customerOpt.isEmpty()) {
@@ -68,7 +67,7 @@ public class BillingServlet extends HttpServlet {
             return;
         }
 
-        String generatedBy = loggedInUser.getUsername();  // or get whatever identifier you want here
+        String generatedBy = loggedInUser.getUsername();  
 
 
         try {

@@ -25,7 +25,7 @@ public class DeleteCustomerServlet extends HttpServlet {
             try {
                 customerService.deleteCustomer(accountNo);
             } catch (Exception e) {
-                // Optional: handle exception, maybe set error attribute
+                
             }
         }
 

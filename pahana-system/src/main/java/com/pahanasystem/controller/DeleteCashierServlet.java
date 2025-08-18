@@ -18,7 +18,7 @@ public class DeleteCashierServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private UserService userService = new UserServiceImpl(new UserDaoImpl());
     
-    // Load the delete cashier page with the cashier list
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -44,10 +44,10 @@ public class DeleteCashierServlet extends HttpServlet {
             request.setAttribute("error", "An error occurred while deleting the cashier.");
         }
 
-        // Load updated cashier list for display
+        
         request.setAttribute("cashierList", userService.getAllCashiers());
 
-        // Forward to the delete-cashier JSP
+        
         request.getRequestDispatcher("/delete-cashier.jsp").forward(request, response);
     }
 }

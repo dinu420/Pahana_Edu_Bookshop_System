@@ -30,11 +30,11 @@ public class LoginServlet extends HttpServlet {
             User user = optionalUser.get();
 
             if (user.getPassword().equals(password)) {
-                // Store user in session
+                
                 HttpSession session = request.getSession();
                 session.setAttribute("user", user);
 
-                // Redirect based on role
+               
                 String role = user.getRole().toLowerCase();
                 switch (role) {
                     case "cashier":
@@ -44,7 +44,7 @@ public class LoginServlet extends HttpServlet {
                         request.getRequestDispatcher("/admin-dashboard.jsp").forward(request, response);
                         return;
                     default:
-                        // Unknown role, return error
+                        
                         request.setAttribute("error", "Unknown user role");
                         request.getRequestDispatcher("/login.jsp").forward(request, response);
                         return;
@@ -52,7 +52,7 @@ public class LoginServlet extends HttpServlet {
             }
         }
 
-        // Invalid login
+        
         request.setAttribute("error", "Invalid username or password");
         request.getRequestDispatcher("/login.jsp").forward(request, response);
     }

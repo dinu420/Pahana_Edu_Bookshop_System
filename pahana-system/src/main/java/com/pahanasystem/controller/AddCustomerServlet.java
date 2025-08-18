@@ -26,28 +26,12 @@ public class AddCustomerServlet extends HttpServlet {
         String unitsParam = request.getParameter("units");
 
         try {
-            // Input validation
-            if (name == null || name.trim().isEmpty()
-                    || telephone == null || telephone.trim().isEmpty()
-                    || unitsParam == null || unitsParam.trim().isEmpty()) {
-                throw new IllegalArgumentException("Name, telephone, and units are required.");
-            }
+            int units = Integer.parseInt(unitsParam.trim());
 
-            int units;
-            try {
-                units = Integer.parseInt(unitsParam.trim());
-                if (units < 0) {
-                    throw new IllegalArgumentException("Units consumed cannot be negative.");
-                }
-            } catch (NumberFormatException e) {
-                throw new IllegalArgumentException("Units must be a valid number.");
-            }
-
-            // Create customer object (without accountNo if it's auto-generated)
             Customer customer = new Customer();
-            customer.setName(name.trim());
-            customer.setAddress(address != null ? address.trim() : "");
-            customer.setTelephone(telephone.trim());
+            customer.setName(name);
+            customer.setAddress(address);
+            customer.setTelephone(telephone);
             customer.setUnitsConsumed(units);
 
             customerService.registerCustomer(customer);
@@ -58,4 +42,5 @@ public class AddCustomerServlet extends HttpServlet {
             request.getRequestDispatcher("/add-customer.jsp").forward(request, response);
         }
     }
+
 }

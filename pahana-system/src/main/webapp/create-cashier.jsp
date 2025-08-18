@@ -17,10 +17,10 @@
     <h3>Create Cashier Account</h3>
     <form action="createCashier" method="post">
         <label>Username:</label>
-        <input type="text" name="username" required>
+        <input type="text" name="username" >
 
         <label>Password:</label>
-        <input type="password" name="password" required>
+        <input type="password" name="password" >
 
         <input type="submit" value="Create Cashier">
     </form>

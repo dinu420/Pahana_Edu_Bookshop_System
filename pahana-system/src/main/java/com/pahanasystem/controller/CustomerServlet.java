@@ -26,10 +26,10 @@ public class CustomerServlet extends HttpServlet {
         List<Customer> customers = customerService.getAllCustomers();
 
         
-        // Attach customers to the request
+        
         request.setAttribute("customers", customers);
 
-        // Forward to JSP for display
+        
         request.getRequestDispatcher("/customer.jsp").forward(request, response);
     }
 }
